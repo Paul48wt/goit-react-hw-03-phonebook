@@ -25,8 +25,9 @@ export class Form extends Component {
     return (
       <form onSubmit={this.handleSubmit} className="form">
         <label className="label">
-          Name
+          <span className="formTitle">Name</span>
           <input
+            className="formInput"
             value={this.state.name}
             onChange={this.handleInputChange}
             type="text"
@@ -37,8 +38,9 @@ export class Form extends Component {
           />
         </label>
         <label className="label">
-          Number
+          <span className="formTitle">Number</span>
           <input
+            className="formInput"
             value={this.state.number}
             onChange={this.handleInputChange}
             type="tel"
@@ -48,7 +50,9 @@ export class Form extends Component {
             required
           />
         </label>
-        <button type="submit">Add contact</button>
+        <button type="submit" className="btn">
+          Add contact
+        </button>
       </form>
     );
   }
