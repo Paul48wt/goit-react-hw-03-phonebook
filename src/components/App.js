@@ -35,6 +35,7 @@ export class App extends Component {
       );
       if (hasName) {
         alert(`${data.name} is already in contacts`);
+        return;
       }
       return {
         contacts: prevState.contacts.concat(data),
